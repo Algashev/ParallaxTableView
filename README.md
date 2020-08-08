@@ -1,1 +1,2 @@
-ParallaxTableView
+# ParallaxTableView
+![A Screenshot](Screenshot.gif)
