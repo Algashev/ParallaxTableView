@@ -12,10 +12,8 @@
 		FF04F1B224DE83EA00BF6C58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FF04F1B024DE83EA00BF6C58 /* LaunchScreen.storyboard */; };
 		FF04F1BA24DE857C00BF6C58 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04F1B924DE857C00BF6C58 /* UIWindow.swift */; };
 		FF04F1BF24DE89A200BF6C58 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04F1BD24DE89A200BF6C58 /* TableViewController.swift */; };
-		FF04F1C024DE89A200BF6C58 /* TableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF04F1BE24DE89A200BF6C58 /* TableViewController.xib */; };
-		FF04F1C224DE918200BF6C58 /* TableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04F1C124DE918200BF6C58 /* TableHeaderView.swift */; };
-		FF04F1C424DE919600BF6C58 /* TableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FF04F1C324DE919600BF6C58 /* TableHeaderView.xib */; };
 		FF04F1C624DE922000BF6C58 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF04F1C524DE922000BF6C58 /* UIView.swift */; };
+		FFB13D0D26AB3125001A000D /* ParallaxTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFB13D0C26AB3125001A000D /* ParallaxTableHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,10 +24,8 @@
 		FF04F1B324DE83EA00BF6C58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FF04F1B924DE857C00BF6C58 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		FF04F1BD24DE89A200BF6C58 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
-		FF04F1BE24DE89A200BF6C58 /* TableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewController.xib; sourceTree = "<group>"; };
-		FF04F1C124DE918200BF6C58 /* TableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableHeaderView.swift; sourceTree = "<group>"; };
-		FF04F1C324DE919600BF6C58 /* TableHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableHeaderView.xib; sourceTree = "<group>"; };
 		FF04F1C524DE922000BF6C58 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		FFB13D0C26AB3125001A000D /* ParallaxTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParallaxTableHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,10 +58,9 @@
 		FF04F1A424DE83E700BF6C58 /* ParallaxTableView */ = {
 			isa = PBXGroup;
 			children = (
-				FF04F1A524DE83E700BF6C58 /* AppDelegate.swift */,
 				FF04F1CA24DF3AB300BF6C58 /* TableViewController */,
-				FF04F1CB24DF3AC600BF6C58 /* TableHeaderView */,
 				FF04F1C924DF3A4200BF6C58 /* Extensions */,
+				FF04F1A524DE83E700BF6C58 /* AppDelegate.swift */,
 				FF04F1AE24DE83EA00BF6C58 /* Assets.xcassets */,
 				FF04F1B024DE83EA00BF6C58 /* LaunchScreen.storyboard */,
 				FF04F1B324DE83EA00BF6C58 /* Info.plist */,
@@ -85,19 +80,10 @@
 		FF04F1CA24DF3AB300BF6C58 /* TableViewController */ = {
 			isa = PBXGroup;
 			children = (
+				FFB13D0C26AB3125001A000D /* ParallaxTableHeaderView.swift */,
 				FF04F1BD24DE89A200BF6C58 /* TableViewController.swift */,
-				FF04F1BE24DE89A200BF6C58 /* TableViewController.xib */,
 			);
 			path = TableViewController;
-			sourceTree = "<group>";
-		};
-		FF04F1CB24DF3AC600BF6C58 /* TableHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				FF04F1C124DE918200BF6C58 /* TableHeaderView.swift */,
-				FF04F1C324DE919600BF6C58 /* TableHeaderView.xib */,
-			);
-			path = TableHeaderView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,8 +144,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF04F1C424DE919600BF6C58 /* TableHeaderView.xib in Resources */,
-				FF04F1C024DE89A200BF6C58 /* TableViewController.xib in Resources */,
 				FF04F1B224DE83EA00BF6C58 /* LaunchScreen.storyboard in Resources */,
 				FF04F1AF24DE83EA00BF6C58 /* Assets.xcassets in Resources */,
 			);
@@ -173,10 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF04F1C624DE922000BF6C58 /* UIView.swift in Sources */,
-				FF04F1C224DE918200BF6C58 /* TableHeaderView.swift in Sources */,
 				FF04F1BA24DE857C00BF6C58 /* UIWindow.swift in Sources */,
 				FF04F1BF24DE89A200BF6C58 /* TableViewController.swift in Sources */,
 				FF04F1A624DE83E700BF6C58 /* AppDelegate.swift in Sources */,
+				FFB13D0D26AB3125001A000D /* ParallaxTableHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

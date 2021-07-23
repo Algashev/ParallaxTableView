@@ -9,14 +9,19 @@
 import UIKit
 
 class TableViewController: UITableViewController {
-    private var tableHeaderView = TableHeaderView()
         
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.tableHeaderView = self.tableHeaderView
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: "reuseIdentifier")
+        self.configureTableHeaderView()
         self.tableView.tableHeaderView?.bounds.size.height = 200
+    }
+    
+    private func  configureTableHeaderView() {
+        let tableHeaderView = ParallaxTableHeaderView()
+        tableHeaderView.imageView.image = #imageLiteral(resourceName: "beauty")
+        tableHeaderView.insertInTableView(self.tableView, controller: self)
     }
 
     // MARK: - Table view data source
@@ -33,24 +38,4 @@ class TableViewController: UITableViewController {
         return cell
     }
 
-}
-
-//MARK: - UIScrollViewDelegate
-
-extension TableViewController {
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        guard let tableHeaderView = self.tableView.tableHeaderView else { return }
-        
-        var topContentInset: CGFloat = 0
-        if #available(iOS 11.0, *) {
-            topContentInset = scrollView.adjustedContentInset.top
-        } else {
-            topContentInset = self.topLayoutGuide.length
-        }
-        let offsetY = -(scrollView.contentOffset.y + topContentInset)
-        self.tableHeaderView.imageViewHeightConstraint.constant = max(tableHeaderView.bounds.height, tableHeaderView.bounds.height + offsetY)
-        self.tableHeaderView.imageViewBottomConstraint.constant = offsetY >= 0 ? 0 : offsetY / 2
-        
-        tableHeaderView.clipsToBounds = offsetY <= 0
-    }
 }
